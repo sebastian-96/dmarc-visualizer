@@ -31,7 +31,7 @@ Docker is a platform for developing, shipping, and running applications in conta
 
 ## Interacting with Containers
 
-- Enter a running Docker container (interactive session): `docker exec -it your-container-name /bin/sh`
+- Enter a running Docker container (interactive session): `docker exec -it your-container-name bash`
 - Show environment variables in a Docker container: `docker exec your-container-name env`
 
 ## Stopping/Removing Containers
@@ -122,7 +122,7 @@ Docker Compose provides an easy way to orchestrate multiple containers, making i
 
 ## Interacting with Containers in Docker-Compose
 
-- Enter a running Docker-Compose service (interactive session): `docker-compose exec your-service-name /bin/sh`
+- Enter a running Docker-Compose service (interactive session): `docker-compose exec your-service-name bash`
 - Show logs for all services: `docker-compose logs`
 - Show logs for a specific service: `docker-compose logs your-service-name`
 - Show logs continuously (follow) for all services: `docker-compose logs -f`
