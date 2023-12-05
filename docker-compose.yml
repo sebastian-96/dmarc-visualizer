@@ -5,13 +5,14 @@ services:
     volumes:
       - ./files:/input:ro
       - ./output_files:/output
-    command: parsedmarc -c /parsedmarc.ini /input/* --debug
+    command: >
+      sh -c "parsedmarc -c /parsedmarc.ini /input/* --debug && sleep 3600"
     depends_on:
       - elasticsearch
-    restart: on-failure
+    restart: always
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.5
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.15
     environment:
       - discovery.type=single-node
     volumes:
