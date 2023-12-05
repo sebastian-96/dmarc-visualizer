@@ -5,11 +5,10 @@ services:
     volumes:
       - ./files:/input:ro
       - ./output_files:/output
-    command: >
-      sh -c "parsedmarc -c /parsedmarc.ini /input/* --debug && sleep 3600"
+    command: parsedmarc -c /parsedmarc.ini /input/* --debug
     depends_on:
       - elasticsearch
-    restart: always
+    restart: on-failure
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.15
