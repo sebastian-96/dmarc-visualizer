@@ -27,6 +27,7 @@ Docker is a platform for developing, shipping, and running applications in conta
 ## Running Containers
 
 - Run a Docker container in detached mode: `docker run -d --name your-container-name your-image-name`
+- Run a Docker container and enter (interactive session): `docker run -it --name your-container-name your-image-name`
 
 ## Interacting with Containers
 
