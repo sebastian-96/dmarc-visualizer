@@ -125,8 +125,12 @@ Docker Compose provides an easy way to orchestrate multiple containers, making i
 - Enter a running Docker-Compose service (interactive session): `docker-compose exec your-service-name bash`
 - Show logs for all services: `docker-compose logs`
 - Show logs for a specific service: `docker-compose logs your-service-name`
+- Show logs with timestamps for all services: `docker-compose logs -t`
+- Show logs with timestamps for a specific service: `docker-compose logs -t your-service-name`
 - Show logs continuously (follow) for all services: `docker-compose logs -f`
 - Show logs continuously (follow) for a specific service: `docker-compose logs -f your-service-name`
+- Show logs with timestamps continuously (follow) for all services: `docker-compose logs -f -t`
+- Show logs with timestamps continuously (follow) for a specific service: `docker-compose logs -f -t your-service-name`
 
 # Mounting Files in Docker-Compose
 
